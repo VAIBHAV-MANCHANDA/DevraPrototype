@@ -3,6 +3,13 @@ import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, ArrowUpRight, ShieldCheck, Paintbrush, Compass, Home as HomeIcon } from "lucide-react";
 import { PROJECTS } from "../data";
 import SEOMeta from "../components/SEOMeta";
+import slider1 from "../../assets/slider1.jpeg";
+import slider2 from "../../assets/slider2.jpeg";
+import slider3 from "../../assets/slider3.jpeg";
+import residentialImg from "../../assets/residential.avif";
+import hospitalityImg from "../../assets/hospitality.avif";
+import commercialImg from "../../assets/commercial.jpg";
+import housingImg from "../../assets/housing.avif";
 
 interface HomeProps {
   onNavigate: (path: string) => void;
@@ -11,19 +18,19 @@ interface HomeProps {
 
 const HERO_SLIDES = [
   {
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+    image: slider1,
     subtitle: "FEATURED ARCHITECTURE // PATIALA",
     title: "Sansarg Residence",
     text: "Shaped around courtyards, light, and honest tactile materials."
   },
   {
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+    image: slider2,
     subtitle: "MODERN RESIDENCE // MOHALI",
     title: "Villa 58",
     text: "Linear forms, structural cantilevers, and flowing cross-ventilation."
   },
   {
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80",
+    image: slider3,
     subtitle: "ESTATE LIVING // PUNJAB BORDER",
     title: "The Kangs Farmhouse",
     text: "A sprawling brick and stone pavilion connecting family with native nature."
@@ -180,7 +187,7 @@ export default function Home({ onNavigate, onSelectProject }: HomeProps) {
             <div className="lg:col-span-6 space-y-8">
               <div className="aspect-[16/11] bg-stone-200 overflow-hidden border border-stone-200 relative group shadow-sm">
                 <img
-                  src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1000&q=80"
+                  src={residentialImg}
                   alt="Interplay of concrete mass and overhead sky void"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 hover:scale-102"
@@ -291,7 +298,7 @@ export default function Home({ onNavigate, onSelectProject }: HomeProps) {
             <div className="border border-stone-800 hover:border-stone-700 transition-all overflow-hidden flex flex-col bg-stone-950">
               <div className="h-44 overflow-hidden relative group">
                 <img
-                  src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=80"
+                  src={residentialImg}
                   alt="Residential Architecture"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -313,7 +320,7 @@ export default function Home({ onNavigate, onSelectProject }: HomeProps) {
             <div className="border border-stone-800 hover:border-stone-700 transition-all overflow-hidden flex flex-col bg-stone-950">
               <div className="h-44 overflow-hidden relative group">
                 <img
-                  src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80"
+                  src={hospitalityImg}
                   alt="Luxury Interiors"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -335,7 +342,7 @@ export default function Home({ onNavigate, onSelectProject }: HomeProps) {
             <div className="border border-stone-800 hover:border-stone-700 transition-all overflow-hidden flex flex-col bg-stone-950">
               <div className="h-44 overflow-hidden relative group">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80"
+                  src={commercialImg}
                   alt="Design to Build"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -357,7 +364,7 @@ export default function Home({ onNavigate, onSelectProject }: HomeProps) {
             <div className="border border-stone-800 hover:border-stone-700 transition-all overflow-hidden flex flex-col bg-stone-950">
               <div className="h-44 overflow-hidden relative group">
                 <img
-                  src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80"
+                  src={housingImg}
                   alt="Masterplanning & Housing"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

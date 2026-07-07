@@ -3,6 +3,7 @@ import { BLOG_POSTS } from "../data";
 import { BlogPost } from "../types";
 import { Search, Calendar, User, Clock, X, ArrowUpRight } from "lucide-react";
 import SEOMeta from "../components/SEOMeta";
+import residentialImg from "../../assets/residential.avif";
 
 export default function Journal() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -187,7 +188,7 @@ export default function Journal() {
               <div className="pt-8 border-t border-stone-200 mt-12 flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-stone-300 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
+                    src={residentialImg}
                     alt="Ar. Rajkumar Devra"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover grayscale"

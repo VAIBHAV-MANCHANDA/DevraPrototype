@@ -1,5 +1,10 @@
 import { CornerDownRight, Wind, Sun, Layers, Hammer, ShieldCheck } from "lucide-react";
 import SEOMeta from "../components/SEOMeta";
+import residentialImg from "../../assets/residential.avif";
+import houSansarg from "../../assets/projects/hou-sansarg-1.avif";
+import fhGills from "../../assets/projects/fh-gills-1.avif";
+import comDevra from "../../assets/projects/com-devra-arch-1.jpg";
+import resVilla201d from "../../assets/projects/res-villa-201d.jpg";
 
 export default function Vision() {
   return (
@@ -56,7 +61,7 @@ export default function Vision() {
             <div className="lg:col-span-4">
               <div className="aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                  src={residentialImg}
                   alt="Real life luxury home courtyard"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
@@ -93,7 +98,7 @@ export default function Vision() {
             <div className="lg:col-span-4">
               <div className="aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80"
+                  src={houSansarg}
                   alt="Therapeutic winter sun and stack ventilation courtyard"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
@@ -129,7 +134,7 @@ export default function Vision() {
             <div className="lg:col-span-4">
               <div className="aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80"
+                  src={fhGills}
                   alt="Aesthetic regional masonry and board-marked concrete"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
@@ -165,7 +170,7 @@ export default function Vision() {
             <div className="lg:col-span-4">
               <div className="aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
+                  src={comDevra}
                   alt="On-site detailing and structural coordination"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
@@ -201,7 +206,7 @@ export default function Vision() {
             <div className="lg:col-span-4">
               <div className="aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80"
+                  src={resVilla201d}
                   alt="Quiet luxury interiors and cozy human scale spaces"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"

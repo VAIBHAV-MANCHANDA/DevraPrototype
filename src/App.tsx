@@ -124,14 +124,14 @@ export default function App() {
         <Footer onNavigate={setCurrentPath} />
 
         {/* 4. Global Sticky WhatsApp Quick-Action (Only displayed once scrolled down) */}
-        <div className="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
+        <div className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 md:bottom-6 md:right-6 z-40 flex flex-col space-y-2.5 md:space-y-3">
           <a
             href="https://wa.me/919779662286?text=Hello%20DEVRA%20Architects,%20I%20am%20interested%20in%20discussing%20a%20project%20with%20you."
             target="_blank"
             rel="noopener noreferrer"
             id="sticky-whatsapp-shortcut"
             title="Chat on WhatsApp"
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 hover:bg-green-700 text-stone-50 shadow-xl hover:scale-105 active:scale-95 transition-all duration-300"
+            className="flex items-center justify-center w-11 h-11 md:w-12 md:h-12 rounded-full bg-green-600 hover:bg-green-700 text-stone-50 shadow-xl hover:scale-105 active:scale-95 transition-all duration-300"
           >
             <MessageSquare className="w-5 h-5 fill-current" />
           </a>
@@ -140,7 +140,7 @@ export default function App() {
             href="tel:+919779662286"
             id="sticky-phone-shortcut"
             title="Call DEVRA Desk"
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-stone-900 hover:bg-stone-800 text-stone-50 shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 border border-stone-800"
+            className="flex items-center justify-center w-11 h-11 md:w-12 md:h-12 rounded-full bg-stone-900 hover:bg-stone-800 text-stone-50 shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 border border-stone-800"
           >
             <PhoneCall className="w-5 h-5" />
           </a>

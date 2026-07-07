@@ -1,6 +1,13 @@
 import { motion } from "motion/react";
 import { Award, Compass, Heart, Users, MapPin, Sparkles } from "lucide-react";
 import SEOMeta from "../components/SEOMeta";
+import residentialImg from "../../assets/residential.avif";
+import resVilla361 from "../../assets/projects/res-villa-361.avif";
+import fhGills from "../../assets/projects/fh-gills-1.avif";
+import resVilla201d from "../../assets/projects/res-villa-201d.jpg";
+import resVilla58 from "../../assets/projects/res-villa-58.jpg";
+import comDevra from "../../assets/projects/com-devra-arch-1.jpg";
+import houSansarg from "../../assets/projects/hou-sansarg-1.avif";
 
 interface AboutProps {
   onNavigate: (path: string) => void;
@@ -56,7 +63,7 @@ export default function About({ onNavigate }: AboutProps) {
         {/* Full width design inspiration banner */}
         <div className="relative h-[50vh] w-full bg-stone-200 overflow-hidden mb-24">
           <img
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+            src={residentialImg}
             alt="Devra workshop detailing"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover"
@@ -89,7 +96,7 @@ export default function About({ onNavigate }: AboutProps) {
             {/* Ar. Rajkumar Devra bio */}
             <div className="md:col-span-5 bg-stone-200 aspect-[3/4] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+                src={residentialImg}
                 alt="Ar. Rajkumar Devra Principal"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover grayscale contrast-110"
@@ -180,7 +187,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="space-y-2">
               <div className="aspect-square bg-stone-100 overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=400&q=80"
+                  src={resVilla361}
                   alt="Raw Board-marked Concrete"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
@@ -192,7 +199,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="space-y-2">
               <div className="aspect-square bg-stone-100 overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80"
+                  src={fhGills}
                   alt="Wire-cut Exposed Brickwork"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
@@ -204,7 +211,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="space-y-2">
               <div className="aspect-square bg-stone-100 overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=400&q=80"
+                  src={resVilla201d}
                   alt="Sandalwood & Kota Stone"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
@@ -216,7 +223,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="space-y-2">
               <div className="aspect-square bg-stone-100 overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=400&q=80"
+                  src={resVilla58}
                   alt="Bespoke Teak Millwork"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
@@ -228,7 +235,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="space-y-2">
               <div className="aspect-square bg-stone-100 overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=400&q=80"
+                  src={comDevra}
                   alt="Drafting & Site Layouts"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
@@ -240,7 +247,7 @@ export default function About({ onNavigate }: AboutProps) {
             <div className="space-y-2">
               <div className="aspect-square bg-stone-100 overflow-hidden border border-stone-200">
                 <img
-                  src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=400&q=80"
+                  src={houSansarg}
                   alt="Circulating Courtyard Sunlight"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"

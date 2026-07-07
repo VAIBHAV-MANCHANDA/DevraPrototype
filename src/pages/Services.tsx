@@ -1,17 +1,22 @@
 import { SERVICES } from "../data";
 import { CornerDownRight, Check, ArrowUpRight } from "lucide-react";
 import SEOMeta from "../components/SEOMeta";
+import residentialImg from "../../assets/residential.avif";
+import hospitalityImg from "../../assets/hospitality.avif";
+import commercialImg from "../../assets/commercial.jpg";
+import housingImg from "../../assets/housing.avif";
+import schoolsImg from "../../assets/schools.avif";
 
 interface ServicesProps {
   onNavigate: (path: string) => void;
 }
 
 const SERVICE_IMAGES: Record<string, string> = {
-  "residential-architecture": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-  "interior-design": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
-  "design-to-build": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
-  "housing": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-  "commercial-hospitality": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80"
+  "residential-architecture": residentialImg,
+  "interior-design": hospitalityImg,
+  "design-to-build": commercialImg,
+  "housing": housingImg,
+  "commercial-hospitality": schoolsImg
 };
 
 export default function Services({ onNavigate }: ServicesProps) {
@@ -54,7 +59,7 @@ export default function Services({ onNavigate }: ServicesProps) {
         <div className="space-y-24">
           {SERVICES.map((service, index) => {
             const isEven = index % 2 === 0;
-            const serviceImg = SERVICE_IMAGES[service.id] || "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80";
+            const serviceImg = SERVICE_IMAGES[service.id] || residentialImg;
             return (
               <section
                 key={service.id}

@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import defaultOgImage from "../../assets/projects/hou-sansarg-1.avif";
 
 interface SEOMetaProps {
   title: string;
@@ -13,7 +14,7 @@ export default function SEOMeta({
   title,
   description,
   keywords = [],
-  ogImage = "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=630&q=80", // Sansarg Hero Image as default
+  ogImage = defaultOgImage,
   ogType = "website",
   path = "",
 }: SEOMetaProps) {

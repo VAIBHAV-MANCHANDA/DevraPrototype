@@ -17,7 +17,7 @@ export default function Footer({ onNavigate }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="devra-footer" className="bg-stone-900 text-stone-300 pt-20 pb-10 border-t border-stone-800">
+    <footer id="devra-footer" className="bg-stone-900 text-stone-300 pt-16 md:pt-20 pb-32 md:pb-10 border-t border-stone-800">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-stone-800/80">
           
@@ -150,8 +150,8 @@ export default function Footer({ onNavigate }: FooterProps) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 text-[11px] text-stone-500 font-mono">
-          <div className="text-center md:text-left space-y-1">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 text-[11px] text-stone-500 font-mono">
+          <div className="text-center md:text-left space-y-1 min-w-0">
             <p>© {currentYear} DEVRA Architects. All rights reserved.</p>
             <p className="text-[10px] text-stone-600">
               Serving Chandigarh, Mohali, Panchkula, New Chandigarh, Patiala, Ludhiana, Jalandhar, Amritsar, Punjab, Haryana, and Pan-India.
@@ -161,7 +161,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           <button
             onClick={handleScrollToTop}
             id="scroll-to-top-button"
-            className="mt-6 md:mt-0 flex items-center gap-1.5 uppercase tracking-widest text-stone-400 hover:text-stone-100 transition-colors group cursor-pointer font-sans text-[10px] font-semibold border border-stone-800 hover:border-stone-600 px-3 py-2"
+            className="flex shrink-0 items-center gap-1.5 uppercase tracking-widest text-stone-400 hover:text-stone-100 transition-colors group cursor-pointer font-sans text-[10px] font-semibold border border-stone-800 hover:border-stone-600 px-3 py-2"
           >
             Back to Top
             <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform" />

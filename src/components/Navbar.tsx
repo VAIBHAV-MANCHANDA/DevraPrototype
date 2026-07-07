@@ -8,19 +8,14 @@ interface NavbarProps {
 
 export default function Navbar({ currentPath, onNavigate }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isOpen]);
 
   const navItems = [
     { label: "Projects", path: "projects" },
@@ -40,11 +35,7 @@ export default function Navbar({ currentPath, onNavigate }: NavbarProps) {
   return (
     <header
       id="devra-header"
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-stone-50/90 backdrop-blur-md border-b border-stone-200/50 py-4 shadow-sm"
-          : "bg-transparent py-6"
-      }`}
+      className="fixed top-0 left-0 w-full z-50 bg-stone-50 border-b border-stone-200 py-4 shadow-sm transition-all duration-500"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Brand Logo */}
@@ -109,25 +100,13 @@ export default function Navbar({ currentPath, onNavigate }: NavbarProps) {
       {/* Mobile Drawer */}
       <div
         id="mobile-drawer"
-        className={`fixed inset-y-0 right-0 w-full max-w-sm bg-stone-50 shadow-2xl border-l border-stone-200 z-40 transform transition-transform duration-500 md:hidden ${
+        className={`fixed inset-x-0 top-[80px] bottom-0 bg-stone-50 shadow-2xl border-t border-stone-200 z-40 transform transition-transform duration-500 md:hidden overflow-y-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col h-full p-8 justify-between">
-          <div className="space-y-8 mt-12">
-            <div className="flex justify-between items-center pb-6 border-b border-stone-200">
-              <span className="font-serif text-xl tracking-widest text-stone-900">
-                D E V R A
-              </span>
-              <button
-                id="mobile-drawer-close"
-                onClick={() => setIsOpen(false)}
-                className="text-stone-500 cursor-pointer"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            <nav className="flex flex-col space-y-6">
+        <div className="flex min-h-full flex-col p-6 sm:p-8 justify-between gap-10">
+          <div className="space-y-8 pt-2">
+            <nav className="flex flex-col divide-y divide-stone-200">
               {navItems.map((item) => {
                 const isActive = currentPath === item.path;
                 return (
@@ -135,7 +114,7 @@ export default function Navbar({ currentPath, onNavigate }: NavbarProps) {
                     key={item.path}
                     id={`mobile-nav-link-${item.path}`}
                     onClick={() => handleNavClick(item.path)}
-                    className={`text-sm uppercase tracking-widest text-left font-sans font-medium transition-all py-1 ${
+                    className={`text-base uppercase tracking-widest text-left font-sans font-medium transition-all py-5 ${
                       isActive ? "text-stone-900 pl-2 border-l-2 border-stone-900" : "text-stone-500"
                     }`}
                   >
@@ -146,11 +125,11 @@ export default function Navbar({ currentPath, onNavigate }: NavbarProps) {
             </nav>
           </div>
 
-          <div className="space-y-6 pb-8">
+          <div className="space-y-6 pb-[max(1rem,env(safe-area-inset-bottom))]">
             <button
               id="mobile-cta-button"
               onClick={() => handleNavClick("contact")}
-              className="w-full flex items-center justify-center gap-1 text-[11px] uppercase tracking-widest font-sans font-medium bg-stone-900 text-stone-50 py-3.5 transition-all duration-300"
+              className="w-full flex items-center justify-center gap-1 text-[11px] uppercase tracking-widest font-sans font-medium bg-stone-900 text-stone-50 py-4 transition-all duration-300"
             >
               Start a Project
               <ArrowUpRight className="w-3.5 h-3.5" />

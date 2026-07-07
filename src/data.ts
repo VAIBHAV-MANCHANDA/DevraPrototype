@@ -1,5 +1,58 @@
 import { Project, Service, ProcessStep, BlogPost } from "./types";
 
+import houSansarg1 from "../assets/projects/hou-sansarg-1.avif";
+import houSansarg2 from "../assets/projects/hou-sansarg-2.avif";
+import houSansarg3 from "../assets/projects/hou-sansarg-3.avif";
+import houSansarg4 from "../assets/projects/hou-sansarg-4.avif";
+import houSansarg5 from "../assets/projects/hou-sansarg-5.avif";
+import houSansarg6 from "../assets/projects/hou-sansarg-6.avif";
+import houSansarg7 from "../assets/projects/hou-sansarg-7.avif";
+import houSansarg8 from "../assets/projects/hou-sansarg-8.avif";
+import houSansarg9 from "../assets/projects/hou-sansarg-9.avif";
+import resVilla58 from "../assets/projects/res-villa-58.jpg";
+import resVilla582 from "../assets/projects/res-villa-58-2.avif";
+import resVilla583 from "../assets/projects/res-villa-58-3.avif";
+import resVilla584 from "../assets/projects/res-villa-58-4.jpg";
+import resVilla585 from "../assets/projects/res-villa-58-5.jpg";
+import resVilla586 from "../assets/projects/res-villa-58-6.jpg";
+import resVilla587 from "../assets/projects/res-villa-58-7.jpg";
+import resVilla588 from "../assets/projects/res-villa-58-8.avif";
+import resVilla201d from "../assets/projects/res-villa-201d.jpg";
+import resVilla201d2 from "../assets/projects/res-villa-201d-2.jpg";
+import resVilla201d3 from "../assets/projects/res-villa-201d-3.jpg";
+import resVilla201d4 from "../assets/projects/res-villa-201d-4.avif";
+import resVilla201d5 from "../assets/projects/res-villa-201d-5.avif";
+import resVilla201d6 from "../assets/projects/res-villa-201d-6.avif";
+import resVilla201d7 from "../assets/projects/res-villa-201d-7.avif";
+import resVilla201d8 from "../assets/projects/res-villa-201d-8.jpg";
+import resVilla201d9 from "../assets/projects/res-villa-201d-9.jpg";
+import resKangs from "../assets/projects/res-kangs.avif";
+import resKangs2 from "../assets/projects/res-kangs-2.avif";
+import resKangs3 from "../assets/projects/res-kangs-3.avif";
+import resVilla361 from "../assets/projects/res-villa-361.avif";
+import resVilla3612 from "../assets/projects/res-villa-361-2.avif";
+import resVilla3613 from "../assets/projects/res-villa-361-3.avif";
+import resVilla3614 from "../assets/projects/res-villa-361-4.avif";
+import resVilla3615 from "../assets/projects/res-villa-361-5.avif";
+import resVilla3616 from "../assets/projects/res-villa-361-6.avif";
+import resVilla3617 from "../assets/projects/res-villa-361-7.avif";
+import resVilla3618 from "../assets/projects/res-villa-361-8.avif";
+import resVilla3619 from "../assets/projects/res-villa-361-9.avif";
+import resSupreet from "../assets/projects/res-supreet.jpg";
+import resSupreet2 from "../assets/projects/res-supreet-2.jpg";
+import resSupreet3 from "../assets/projects/res-supreet-3.jpg";
+import schMsSchool from "../assets/projects/sch-ms-school-a.avif";
+import schMsSchool2 from "../assets/projects/sch-ms-school-b.avif";
+import schMsSchool3 from "../assets/projects/sch-ms-school-c.avif";
+import houPanchkula1 from "../assets/projects/hou-panchkula-1.avif";
+import houPanchkula2 from "../assets/projects/hou-panchkula-2.avif";
+import houPanchkula3 from "../assets/projects/hou-panchkula-3.avif";
+import houPanchkula4 from "../assets/projects/hou-panchkula-4.avif";
+import houPanchkula5 from "../assets/projects/hou-panchkula-5.avif";
+import houPanchkula6 from "../assets/projects/hou-panchkula-6.avif";
+import houPanchkula7 from "../assets/projects/hou-panchkula-7.avif";
+import houPanchkula8 from "../assets/projects/hou-panchkula-8.avif";
+
 export const PROJECTS: Project[] = [
   {
     id: "sansarg",
@@ -9,7 +62,7 @@ export const PROJECTS: Project[] = [
     year: "2022",
     size: "6,500 sq. ft.",
     scope: "Architecture, Interiors & Landscaping",
-    heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+    heroImage: houSansarg1,
     description: "Featured on Buildofy, Sansarg is a celebration of interconnected spaces, deep courtyards, and honest material usage. Designed as a sanctuary for a multi-generational family, the residence plays with double-height volumes and the gentle movement of natural light throughout the day.",
     narrative: {
       site: "The site is located in a quiet residential pocket of Patiala, experiencing hot summers and cold winters. Privacy from neighboring plots was a primary constraint, which led to an introverted, courtyard-centric design.",
@@ -19,10 +72,14 @@ export const PROJECTS: Project[] = [
       execution: "Special care was given to the concrete casting. The shuttering patterns were carefully coordinated with local artisans, resulting in a textured, rhythmic surface that changes character as the sun shifts."
     },
     images: [
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80"
+      houSansarg2,
+      houSansarg3,
+      houSansarg4,
+      houSansarg5,
+      houSansarg6,
+      houSansarg7,
+      houSansarg8,
+      houSansarg9
     ]
   },
   {
@@ -33,7 +90,7 @@ export const PROJECTS: Project[] = [
     year: "2023",
     size: "5,200 sq. ft.",
     scope: "Architecture & Interior Design",
-    heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+    heroImage: resVilla58,
     description: "A contemporary urban home defined by clean linear lines, dramatic concrete cantilevers, and a design that prioritizes cross-ventilation and spatial fluidity.",
     narrative: {
       site: "Situated on a standard urban plot in Mohali, the layout maximizes the available footprint while respecting strict local building bylaws and maintaining green margins.",
@@ -43,9 +100,13 @@ export const PROJECTS: Project[] = [
       execution: "Every junction between the glass frames and concrete slabs was detailed to be entirely flush. Recessed profile lighting and integrated storage solutions were designed in-house to maintain a clean, uncluttered architectural horizon."
     },
     images: [
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1502005229762-fc1b2d812ca5?auto=format&fit=crop&w=1200&q=80"
+      resVilla582,
+      resVilla583,
+      resVilla584,
+      resVilla585,
+      resVilla586,
+      resVilla587,
+      resVilla588
     ]
   },
   {
@@ -56,7 +117,7 @@ export const PROJECTS: Project[] = [
     year: "2022",
     size: "4,800 sq. ft.",
     scope: "Luxury Interior Styling & Spatial Planning",
-    heroImage: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80",
+    heroImage: resVilla201d,
     description: "A warm minimalist interior styling project that brings together rich Italian marble, custom bespoke brass detailing, and custom furniture tailored to the family's daily routines.",
     narrative: {
       site: "An existing premium residence in Chandigarh required a complete internal transformation to reflect the occupant’s minimalist lifestyle and hosting habits.",
@@ -66,8 +127,14 @@ export const PROJECTS: Project[] = [
       execution: "Bespoke furniture was constructed off-site under strict quality control, then assembled at the site to ensure seamless grain alignments and razor-sharp brass joinery."
     },
     images: [
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80"
+      resVilla201d2,
+      resVilla201d3,
+      resVilla201d4,
+      resVilla201d5,
+      resVilla201d6,
+      resVilla201d7,
+      resVilla201d8,
+      resVilla201d9
     ]
   },
   {
@@ -78,7 +145,7 @@ export const PROJECTS: Project[] = [
     year: "2023",
     size: "8,000 sq. ft.",
     scope: "Architecture, Interiors & Landscape Design",
-    heroImage: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80",
+    heroImage: resKangs,
     description: "A sprawling luxury farmhouse designed as a series of connected low-slung pavilions that frame views of the surrounding organic farms and lush landscapes.",
     narrative: {
       site: "The site is a multi-acre organic agricultural estate near the Punjab-Haryana border, offering endless panoramic views and absolute quietude.",
@@ -88,8 +155,8 @@ export const PROJECTS: Project[] = [
       execution: "We worked closely with local kiln operators to procure brick batches with specific organic color variations. The landscape planning uses native, low-water plants to blend the estate seamlessly into the wider agricultural canvas."
     },
     images: [
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1200&q=80"
+      resKangs2,
+      resKangs3
     ]
   },
   {
@@ -100,7 +167,7 @@ export const PROJECTS: Project[] = [
     year: "2024",
     size: "7,200 sq. ft.",
     scope: "Architecture, Interiors & Site Supervision",
-    heroImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
+    heroImage: resVilla361,
     description: "A luxury multi-level villa featuring a dramatic floating cantilever stair, double-height glazing, and integrated high-end home automation designed for modern comfort.",
     narrative: {
       site: "Located in a newly developed premium sector of New Chandigarh, the site commands distant views of the Shivalik hills on clear days.",
@@ -110,8 +177,14 @@ export const PROJECTS: Project[] = [
       execution: "The key challenge was the cantilevered metal and wood staircase which hangs seamlessly without central support. Detailed engineering drawings and on-site testing were performed to ensure structural rigidity and perfect safety."
     },
     images: [
-      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=1200&q=80"
+      resVilla3612,
+      resVilla3613,
+      resVilla3614,
+      resVilla3615,
+      resVilla3616,
+      resVilla3617,
+      resVilla3618,
+      resVilla3619
     ]
   },
   {
@@ -122,7 +195,7 @@ export const PROJECTS: Project[] = [
     year: "2023",
     size: "4,500 sq. ft.",
     scope: "Architecture & Direct Site Execution",
-    heroImage: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80",
+    heroImage: resSupreet,
     description: "Designed for a retired army officer, this home blends classic order and military-grade discipline with modern materials, high thermal insulation, and accessible layout planning.",
     narrative: {
       site: "A north-facing corner plot in Mohali. The corner location allowed for twin facades, both treated with equal weight and sculptural attention.",
@@ -132,8 +205,8 @@ export const PROJECTS: Project[] = [
       execution: "Constructed using highly engineered insulated brick cavities. Regular on-site supervision by our team ensured that the thermal barriers remained unbroken, leading to a 30% reduction in heating and cooling energy usage."
     },
     images: [
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80"
+      resSupreet2,
+      resSupreet3
     ]
   },
   {
@@ -144,7 +217,7 @@ export const PROJECTS: Project[] = [
     year: "2020",
     size: "24,000 sq. ft.",
     scope: "Architecture & Campus Masterplanning",
-    heroImage: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1600&q=80",
+    heroImage: schMsSchool,
     description: "An institutional environment that redefines classroom layouts by surrounding them with interactive courtyard corridors, passive light scoops, and robust, maintenance-free finishes.",
     narrative: {
       site: "A flat 2-acre campus in rural Punjab. The masterplan was oriented to shield the main playing grounds from strong dust-carrying winds.",
@@ -154,8 +227,8 @@ export const PROJECTS: Project[] = [
       execution: "Built under strict cost-efficiency guidelines. We used modular construction grids to minimize steel and brick wastage, ensuring high-quality architectural results within a modest public trust budget."
     },
     images: [
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80"
+      schMsSchool2,
+      schMsSchool3
     ]
   },
   {
@@ -166,7 +239,7 @@ export const PROJECTS: Project[] = [
     year: "2021",
     size: "1,20,000 sq. ft.",
     scope: "Architecture, Facade Design & Masterplanning",
-    heroImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+    heroImage: houPanchkula1,
     description: "A premium group housing project composed of elegant multi-family units designed to offer high visual privacy, individual terrace decks, and active shared central greens.",
     narrative: {
       site: "A linear site with two open boundaries, allowing us to align the blocks along a north-south axis for optimum thermal performance.",
@@ -176,8 +249,13 @@ export const PROJECTS: Project[] = [
       execution: "Special coordination was required to design the extensive subterranean post-tensioned concrete slab supporting the heavy soils and trees of the central park above."
     },
     images: [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80"
+      houPanchkula2,
+      houPanchkula3,
+      houPanchkula4,
+      houPanchkula5,
+      houPanchkula6,
+      houPanchkula7,
+      houPanchkula8
     ]
   }
 ];

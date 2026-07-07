@@ -58,7 +58,7 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
   }, [activeImageIndex, project.images.length]);
 
   return (
-    <div id={`project-detail-${project.id}`} className="bg-stone-50 text-stone-900 min-h-screen pb-20">
+    <div id={`project-detail-${project.id}`} className="bg-stone-50 text-stone-900 min-h-screen pb-16 md:pb-20">
       <SEOMeta
         title={`${project.title} - ${project.category} in ${project.location}`}
         description={`${project.description} Custom architecture, interiors, and spatial design in Punjab and Chandigarh executed by DEVRA Architects.`}
@@ -77,7 +77,7 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
       />
       
       {/* 1. Full-Screen Top Hero Image */}
-      <section className="relative h-[80vh] w-full bg-stone-900 overflow-hidden">
+      <section className="relative h-[72svh] min-h-[520px] md:h-[80vh] w-full bg-stone-900 overflow-hidden">
         <div className="absolute inset-0 bg-black/45 z-10" />
         <img
           src={project.heroImage}
@@ -85,7 +85,7 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-x-0 bottom-0 z-20 max-w-7xl mx-auto px-6 md:px-12 pb-16">
+        <div className="absolute inset-x-0 bottom-0 z-20 max-w-7xl mx-auto px-5 sm:px-6 md:px-12 pb-10 md:pb-16">
           <div className="space-y-3 text-stone-50">
             <button
               onClick={() => {
@@ -97,10 +97,10 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
               <ArrowLeft className="w-3.5 h-3.5" />
               Back to Projects
             </button>
-            <p className="text-[11px] tracking-[0.3em] uppercase text-stone-300 font-mono">
+            <p className="text-[10px] sm:text-[11px] tracking-[0.18em] sm:tracking-[0.3em] uppercase text-stone-300 font-mono break-words">
               {project.category} // {project.location}
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-50 font-medium tracking-tight">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-50 font-medium tracking-tight leading-tight">
               {project.title}
             </h1>
           </div>
@@ -108,7 +108,7 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
       </section>
 
       {/* 2. Project Factsheet Grid */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 border-b border-stone-200">
+      <section className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 py-14 md:py-16 border-b border-stone-200">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           
           {/* Main summary descriptive statement */}
@@ -123,34 +123,34 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
           </div>
 
           {/* Right facts panel */}
-          <div className="md:col-span-5 bg-stone-100 p-8 border border-stone-200 space-y-5">
+          <div className="md:col-span-5 bg-stone-100 p-5 sm:p-8 border border-stone-200 space-y-5 min-w-0">
             <h3 className="text-xs uppercase tracking-widest text-stone-900 font-mono font-bold pb-2 border-b border-stone-300">
               Project Facts
             </h3>
             
-            <div className="grid grid-cols-3 gap-2 text-xs">
+            <div className="grid grid-cols-[minmax(0,6rem)_minmax(0,1fr)] sm:grid-cols-3 gap-2 text-xs">
               <span className="text-stone-400 uppercase tracking-widest font-mono text-[10px]">Location</span>
-              <span className="col-span-2 text-stone-800 font-medium">{project.location}</span>
+              <span className="sm:col-span-2 text-stone-800 font-medium min-w-0 break-words">{project.location}</span>
             </div>
 
-            <div className="grid grid-cols-3 gap-2 text-xs">
+            <div className="grid grid-cols-[minmax(0,6rem)_minmax(0,1fr)] sm:grid-cols-3 gap-2 text-xs">
               <span className="text-stone-400 uppercase tracking-widest font-mono text-[10px]">Category</span>
-              <span className="col-span-2 text-stone-800 font-medium">{project.category}</span>
+              <span className="sm:col-span-2 text-stone-800 font-medium min-w-0 break-words">{project.category}</span>
             </div>
 
-            <div className="grid grid-cols-3 gap-2 text-xs">
+            <div className="grid grid-cols-[minmax(0,6rem)_minmax(0,1fr)] sm:grid-cols-3 gap-2 text-xs">
               <span className="text-stone-400 uppercase tracking-widest font-mono text-[10px]">Project Size</span>
-              <span className="col-span-2 text-stone-800 font-medium">{project.size}</span>
+              <span className="sm:col-span-2 text-stone-800 font-medium min-w-0 break-words">{project.size}</span>
             </div>
 
-            <div className="grid grid-cols-3 gap-2 text-xs">
+            <div className="grid grid-cols-[minmax(0,6rem)_minmax(0,1fr)] sm:grid-cols-3 gap-2 text-xs">
               <span className="text-stone-400 uppercase tracking-widest font-mono text-[10px]">Year</span>
-              <span className="col-span-2 text-stone-800 font-medium">{project.year}</span>
+              <span className="sm:col-span-2 text-stone-800 font-medium min-w-0 break-words">{project.year}</span>
             </div>
 
-            <div className="grid grid-cols-3 gap-2 text-xs">
+            <div className="grid grid-cols-[minmax(0,6rem)_minmax(0,1fr)] sm:grid-cols-3 gap-2 text-xs">
               <span className="text-stone-400 uppercase tracking-widest font-mono text-[10px]">Scope</span>
-              <span className="col-span-2 text-stone-800 font-medium">{project.scope}</span>
+              <span className="sm:col-span-2 text-stone-800 font-medium min-w-0 break-words">{project.scope}</span>
             </div>
           </div>
 
@@ -158,7 +158,7 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
       </section>
 
       {/* 3. Deep Architectural Chapters / Sections */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+      <section className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 py-16 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20">
           
           <div className="lg:col-span-4 space-y-4">
@@ -231,8 +231,8 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
       </section>
 
       {/* 4. Large Editorial Rhythm Project Gallery */}
-      <section className="bg-stone-100 py-20 border-y border-stone-200/60">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-10">
+      <section className="bg-stone-100 py-16 md:py-20 border-y border-stone-200/60">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 space-y-10">
           
           <div className="text-center mb-10 space-y-2">
             <span className="text-[10px] tracking-[0.3em] uppercase text-stone-500 font-mono font-bold">
@@ -279,17 +279,17 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
       </section>
 
       {/* 5. Bottom Navigation Slider (Prev/Next) */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-20 flex justify-between items-center border-t border-stone-200 mt-20">
+      <section className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 pt-12 md:pt-20 grid grid-cols-2 gap-4 border-t border-stone-200 mt-14 md:mt-20">
         <button
           onClick={handlePrevClick}
-          className="flex items-center gap-3 group text-left cursor-pointer transition-all hover:translate-x-[-4px]"
+          className="min-w-0 flex items-center gap-2 sm:gap-3 group text-left cursor-pointer transition-all hover:translate-x-[-4px]"
         >
-          <ArrowLeft className="w-5 h-5 text-stone-400 group-hover:text-stone-900 transition-colors" />
-          <div>
-            <p className="text-[9px] text-stone-400 uppercase tracking-widest font-mono">
+          <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-stone-400 group-hover:text-stone-900 transition-colors" />
+          <div className="min-w-0">
+            <p className="text-[8px] sm:text-[9px] text-stone-400 uppercase tracking-[0.18em] sm:tracking-widest font-mono">
               PREVIOUS PROJECT
             </p>
-            <p className="font-serif text-base text-stone-900 font-medium group-hover:text-stone-600 transition-colors">
+            <p className="font-serif text-base sm:text-lg text-stone-900 font-medium group-hover:text-stone-600 transition-colors truncate">
               {prevProject.title}
             </p>
           </div>
@@ -297,23 +297,23 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
 
         <button
           onClick={handleNextClick}
-          className="flex items-center gap-3 group text-right cursor-pointer transition-all hover:translate-x-[4px]"
+          className="min-w-0 flex items-center justify-end gap-2 sm:gap-3 group text-right cursor-pointer transition-all hover:translate-x-[4px]"
         >
-          <div>
-            <p className="text-[9px] text-stone-400 uppercase tracking-widest font-mono">
+          <div className="min-w-0">
+            <p className="text-[8px] sm:text-[9px] text-stone-400 uppercase tracking-[0.18em] sm:tracking-widest font-mono">
               NEXT PROJECT
             </p>
-            <p className="font-serif text-base text-stone-900 font-medium group-hover:text-stone-600 transition-colors">
+            <p className="font-serif text-base sm:text-lg text-stone-900 font-medium group-hover:text-stone-600 transition-colors truncate">
               {nextProject.title}
             </p>
           </div>
-          <ArrowRight className="w-5 h-5 text-stone-400 group-hover:text-stone-900 transition-colors" />
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-stone-400 group-hover:text-stone-900 transition-colors" />
         </button>
       </section>
 
       {/* 6. Detail Page CTA */}
-      <section className="max-w-4xl mx-auto px-6 text-center pt-24 space-y-6">
-        <h3 className="font-serif text-2xl md:text-3xl text-stone-900 font-medium">
+      <section className="max-w-4xl mx-auto px-5 sm:px-6 text-center pt-18 md:pt-24 space-y-6">
+        <h3 className="font-serif text-2xl md:text-3xl text-stone-900 font-medium leading-tight">
           Start your project with DEVRA
         </h3>
         <p className="text-stone-600 text-xs leading-relaxed max-w-lg mx-auto font-light">
@@ -322,7 +322,7 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
         <div className="pt-2">
           <button
             onClick={() => onNavigate("contact")}
-            className="inline-flex items-center gap-1 bg-stone-900 hover:bg-stone-800 text-stone-50 py-3.5 px-7 text-xs uppercase tracking-widest font-semibold cursor-pointer"
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-1 bg-stone-900 hover:bg-stone-800 text-stone-50 py-3.5 px-6 sm:px-7 text-[11px] sm:text-xs uppercase tracking-widest font-semibold cursor-pointer"
           >
             Start a Conversation
             <ArrowUpRight className="w-4 h-4" />
@@ -373,7 +373,7 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
                 }}
                 className="absolute left-0 md:left-4 z-10 p-3 bg-stone-900/40 hover:bg-stone-900/80 text-stone-300 hover:text-stone-50 transition-all rounded-full cursor-pointer border border-stone-800/40 flex items-center justify-center"
               >
-                <ChevronLeft className="w-5 h-5 md:w-6 h-6" />
+                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
               </button>
 
               {/* Dynamic Image Display with animations */}
@@ -404,7 +404,7 @@ export default function ProjectDetail({ project, onNavigate, onSelectProject }: 
                 }}
                 className="absolute right-0 md:right-4 z-10 p-3 bg-stone-900/40 hover:bg-stone-900/80 text-stone-300 hover:text-stone-50 transition-all rounded-full cursor-pointer border border-stone-800/40 flex items-center justify-center"
               >
-                <ChevronRight className="w-5 h-5 md:w-6 h-6" />
+                <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
               </button>
             </div>
 
